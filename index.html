@@ -10,6 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Anton&family=Cal+Sans&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Spicy+Rice&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
        
 </head>
 <body>
@@ -28,7 +29,7 @@
                 <div class="weather-data">
                     
                     <div>
-                      <p><strongh class="how"> Tuesday 14:49, scattered clouds</strong></p>
+                      <p><strongh class="how"> Tuesday 14:49, <span id="description"> </span></strong></p>
                         
                       <p>
                         <table class="table"> 
@@ -38,8 +39,8 @@
                             </tr>
 
                             <tr>
-                                <td><strong>66%</strong></td> <td style="border-left: 2px solid white;"></td>
-                                <td><strong>3.13km/h</strong></td>
+                                <td><strong><span  id="humidity">66</span>%</strong></td> <td style="border-left: 2px solid white;"></td>
+                                <td><strong><span id="wind">3.13 </span>km/h</strong></td>
                             </tr>    
                         </table>
                       </p>
@@ -50,8 +51,8 @@
 
                 <div class="weather-temp">
                    <p>
-                     <span class="icon">&#x26C5;</span>
-                     <span class="degree"><strong>12</strong></span><strong><span class="celcuis">&deg;C</span></strong>
+                     <span class="icon" id="icon">&#x26C5;</span>
+                     <span class="degree" id="degree"><strong>12</strong></span><strong><span class="celcuis">&deg;C</span></strong>
                      
 
                     </p>
