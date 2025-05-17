@@ -1,11 +1,15 @@
 function refreshWeather(response) {
-    console.log(response.data);
+    console.log(response.data)
     let currentTemp = document.querySelector("#degree");
     let ttemperature = response.data.temperature.current;
     let descriptionElement = document.querySelector("#description");
     let description = response.data.condition.description;
     let windElement = document.querySelector("#wind");
     let humidityElement = document.querySelector("#humidity");
+    let date = new Date(response.data.time * 1000);
+    let timeElement = document.querySelector("#time");
+
+    timeElement.innerHTML = `${date.getDate()} ${date.getHours()}:${date.getMinutes()}`;
 
     currentTemp.innerHTML = Math.round(ttemperature);
     descriptionElement.innerHTML = description;
