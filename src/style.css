@@ -96,6 +96,8 @@ text-align: center;
 .weather-temp{
     margin: -30px 160px;
     flex-wrap: nowrap;
+    position: relative;
+    display: flex;
     
     
     
@@ -110,18 +112,23 @@ p{
 }
 .degree{
     font-size: 70px;
-   
+    position: relative;
+    top: 45px;
     
 }
 
 .icon{
    font-size: 40px;
+   position: relative;
+   top: 45px;
+
+
    
 }
 .celcuis{
     font-size: 30px;
     position: relative;
-    top: -27px; 
+    top: 60px; 
 }
 .weather-data strong{
 color: rgb(30, 252, 123);
