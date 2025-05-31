@@ -22,8 +22,8 @@ body{
     max-width:600px ;
     box-shadow: 10px 10px 100px rgb(19, 32, 34);
     border-radius: 10px;
-    color: rgb(2, 127, 189);
-    height: 340px;
+    color: rgb(14, 58, 80);
+    height: 450px;
 }
 
 .searchInput{
@@ -71,7 +71,7 @@ a{
     
     
 how {
-    color:rgb(106, 165, 197) ;
+    color:rgb(19, 61, 83) ;
     display: inline;
    
 }
@@ -132,4 +132,23 @@ p{
 }
 .weather-data strong{
 color: rgb(30, 252, 123);
+}
+.weather-forecast{
+    display: flex;
+    gap: 60px;
+}
+.weather-forecast-day{
+    font-size: 100%;
+    color: rgb(175, 175, 175);
+    text-align: center;
+
+}
+.weather-forecast-icon{
+  width: 70px;
+  height:auto;
+
+}
+.weather-forecast-degrees{
+    color: rgb(30, 252, 123);
+    text-align: center;
 }
