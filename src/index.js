@@ -52,3 +52,27 @@ function cityweathername(event) {
 
 let searchFormElement = document.querySelector("#searchForm");
 searchFormElement.addEventListener("submit", cityweathername);
+
+function displayFocast() {
+
+let days = ["Tue","Wed", "Thur", "Fri", "Sat"];
+let forecastHtml = "";
+
+
+days.forEach(function (day) {
+
+    forecastHtml += ` <div class="weather-forecast-day">
+                    <div class="weather-forecast-day"> <strong>${day}</strong></div>
+                    <div><img src="https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-01-512.png"
+                            class="weather-forecast-icon"></img> </div>
+                    <div class="weather-forecast-degrees"><strong>15&deg; 9&deg;</strong></div>
+                </div>
+                `;
+}); 
+let forecastElement = document.querySelector("#forecast");
+forecastElement.innerHTML = forecastHtml;
+}
+
+
+displayFocast();
+ 
