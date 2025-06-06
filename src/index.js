@@ -29,6 +29,9 @@ function formateDate(date) {
     let day = days[date.getDay()];
     return`${day} ${hours}:${minutes}`; 
 
+    if (minutes <10 ) {
+        minutes = 0 +  minutes
+    }
 
     
 }
@@ -40,7 +43,11 @@ function searchCity(city) {
    axios.get(apiUrl).then(refreshWeather)
 }
 
-
+function formatForecastDate(timestamp) {
+    let date = new Date(time * 1000)
+    let days = ["Sun","Mon","Tue","Wed","Thur","Fri","Sat"]
+    
+}
 
 function cityweathername(event) {
     event.preventDefault();
@@ -58,17 +65,17 @@ searchFormElement.addEventListener("submit", cityweathername);
 
 function displayForecast(response) {
 
-let days = ["Tue","Wed", "Thur", "Fri", "Sat"];
+
 let forecastHtml = "";
 
 
-days.forEach(function (day) {
+response.data.daily.forEach(function (day) {
 
     forecastHtml += ` <div class="weather-forecast-day">
-                    <div class="weather-forecast-day"> <strong>${day}</strong></div>
-                    <div><img src="https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-01-512.png"
+                    <div class="weather-forecast-day">${day.temperature.day} <strong></strong></div>
+                    <div><img src="${day.condition.icon_url}"
                             class="weather-forecast-icon"></img> </div>
-                    <div class="weather-forecast-degrees"><strong>15&deg; 9&deg;</strong></div>
+                    <div class="weather-forecast-degrees"><strong>${Math.round(day.temperature.minimum)}&deg;</strong><span> ${Math.round(day.temperature.maximum)}&deg;</span></div>
                 </div>
                 `;
 }); 
