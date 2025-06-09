@@ -73,7 +73,9 @@ response.data.daily.forEach(function (day, index) {
     if ( index < 5 ) {
         
     
-    forecastHtml += ` <div class="weather-forecas">
+    forecastHtml += ` <div class="weather-forecas" style="border: 3px solid gray;
+    border-radius: 4px;
+    padding:4px;"> 
                         <div class="weather-forecast-day">
                             <strong>${formatForecastDate(day.time)} </strong>
                         </div>   
@@ -81,7 +83,7 @@ response.data.daily.forEach(function (day, index) {
                             <img src="${day.condition.icon_url}"></img>
                         </div>   
                         <div class="weather-forecast-degrees">
-                            <strong><span>  ${Math.round(day.temperature.maximum)}</span>&deg;</strong>
+                            <strong><span>${Math.round(day.temperature.maximum)}</span>&deg;</strong>
                             <span> ${Math.round(day.temperature.minimum)}&deg;</span>
                         </div>
                      </div>`
