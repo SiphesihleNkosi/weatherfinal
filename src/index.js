@@ -74,8 +74,8 @@ response.data.daily.forEach(function (day, index) {
         
     
     forecastHtml += ` <div class="weather-forecas" style="border: 3px solid gray;
-    border-radius: 4px;
-    padding:4px;"> 
+    border-radius: 15px;
+    padding:4px; background: rgba(225, 225, 225, -5); backdrop-filter:blur(5px);"> 
                         <div class="weather-forecast-day">
                             <strong>${formatForecastDate(day.time)} </strong>
                         </div>   
