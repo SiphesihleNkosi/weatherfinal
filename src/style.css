@@ -1,6 +1,6 @@
 body{
     
-    background-image: url('../images/nat.jpeg');
+    background-image: url('../images/OIP.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -19,17 +19,17 @@ body{
     background: rgb(0, 0, 0, 0.5) ;
     margin: 60px auto;
     padding: 30px 50px;
-    max-width:600px ;
+    max-width:800px ;
     box-shadow: 10px 10px 100px rgb(19, 32, 34);
     border-radius: 10px;
-    color: rgb(14, 58, 80);
-    height: 450px;
+    color: rgb(215, 237, 247);
+    height: 480px;
 }
 
 .searchInput{
     
     padding: 7px;
-    width: 500px;
+    width: 720px;
     border-right: none ;
     font-size: 18px;
     border-top-left-radius: 20px;
@@ -62,6 +62,7 @@ h1{ margin: 0;
     font-size: small;
     color: rgb(161, 161, 161);
     text-align: center;
+    
 }
 
 a{
@@ -134,21 +135,31 @@ p{
 color: rgb(30, 252, 123);
 }
 .weather-forecast{
+    position: relative;
     display: flex;
-    gap: 60px;
+    gap: 80px;
+    justify-content: center;
+    border: 3px solid gray;
 }
 .weather-forecast-day{
-    font-size: 100%;
     color: rgb(175, 175, 175);
-    text-align: center;
-
+   text-align: center;
+    padding-left: 10px;
 }
 .weather-forecast-icon{
-  width: 70px;
-  height:auto;
-
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+    height:auto;
+    padding-right: 10px;
+  
 }
 .weather-forecast-degrees{
     color: rgb(30, 252, 123);
     text-align: center;
+    position: relative;
+    word-spacing: 25px;
+    padding-left: 11px;
+   
+    
 }
